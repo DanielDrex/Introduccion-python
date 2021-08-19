@@ -1,3 +1,5 @@
+# Curso de introduccion a python
+# Basado en curso Python sin fronteras de Nicolas Schurmann
 # Inciar proyecto de git
 git init
 
@@ -26,5 +28,3 @@ git merge (branch que quiero fusionar los cambios)
 
 # Mostrar los cambios entre branch
 git diff (branch1) (branch2)
-
-# Ejemplo

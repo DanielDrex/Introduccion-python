@@ -64,3 +64,4 @@ edades = [24,25,26,30]
 for usuario in usuarios:
     for edad in edades:
         print(usuario,edad)
+

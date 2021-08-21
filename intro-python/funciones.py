@@ -42,5 +42,39 @@ impNombre2(nombre = 'Juan',apellido = 'perez')
 
 #Estas dos ultimas funciones tienen el mismo comportamiento en la impresion pera la forma de acceder al parametro es diferente
 
+#Funcion con argumento por defecto en caso de no especificarlo
 
+def miFuncion2(argumento = 'Por defecto'):
+    print(argumento)
 
+miFuncion2('Batman')
+miFuncion2()
+
+#Funcion que recibe una lista
+def miFuncionLista(lista):
+    for elemento in lista:
+        print(elemento)
+
+lista1 = ['elemento 1','elemento 2','elemento 3']
+miFuncionLista(lista1)
+
+#Funcion que recibe una lista y nos retorna la concatenacion de los valores recibidos
+def concatenaNombres(lista):
+    s = ''
+    for elemento in lista:
+        s+=elemento+' '
+    return s
+
+nombreCompleto = concatenaNombres(['juan','perez','flores'])
+
+print(nombreCompleto)
+
+#Introduccion a recursion
+
+def recursion(i):
+    if i < 1:
+        return i
+    else:
+        recursion(i-1)
+        print(i)
+recursion(6)

@@ -19,3 +19,5 @@ usuario2 = Usuario2('Juan','Perez')
 usuario3 = Usuario2('Pedro','Flores')
 
 print(usuario2.nombre,usuario2.apellido,usuario3.nombre,usuario3.apellido)
+
+#Prueba

@@ -14,10 +14,27 @@ class Usuario2:
     def __init__(self,nombre,apellido):
         self.nombre = nombre
         self.apellido = apellido
+    
+    def saludo(self):
+        print('Hola mi nombre es',self.nombre,self.apellido)
 
 usuario2 = Usuario2('Juan','Perez')
 usuario3 = Usuario2('Pedro','Flores')
 
-print(usuario2.nombre,usuario2.apellido,usuario3.nombre,usuario3.apellido)
+#Hacemos uso de nuestra funcion saludo
+usuario2.saludo()
+usuario3.saludo()
 
-#Prueba
+#Con la palabra reservada del podemos eliminar propiedades y/o objetos
+'''
+del usuario3.nombre
+usuario3.saludo()
+'''
+#Herencia
+class Admin(Usuario2):
+    def superSaludo(self):
+        print('Hola me llamo',self.nombre, 'y soy administrador')
+
+admin = Admin('Super','Administrador')
+admin.saludo()
+admin.superSaludo()

@@ -1,27 +1,39 @@
 #Agrupar parentesis que abre y que cierra de forma que tengan la misma cantidad de cada uno
+from typing import Sized
+
 class Solution:
     def solve(self, s):
-        lista = list(s)
         pc = ''
         cont = 0
         index = 0
         listaR = []
-        while index < len(lista):
-            if lista[index] == '(':
+        for index in s:
+            if index == '(':
                 pc = pc + '('
                 cont +=1
-                index+=1 
-            elif lista[index] == ')' and cont == 1:
-                pc = pc + lista[index]
+            elif index == ')' and cont == 1:
+                pc = pc + index
                 listaR.append(pc)
-                index+=1
                 cont-=1
                 pc = ''
             else:
-                pc = pc + lista[index]
-                cont-=1
-                index+=1       
+                pc = pc + index
+                cont-=1         
         return listaR
 
+    def solve1(self, n):
+        s = str(n)
+        result = 0
+        for digit in s:
+            result += int(digit)
+            
+        if len(str(result)) == 1:
+            return result
+        elif len(str(result)) >= 2:
+            return Solution.solve1(self,result)
+             
+
 sol = Solution()
-print(sol.solve('()()()(((())))(())'))
+x = int(input('Ingresa un numero entero: '))
+print('La suma de cada digito del numero en una sola cifra es:',sol.solve1(x))
+print(sol.solve('()()()(())((()))(((())))()'))

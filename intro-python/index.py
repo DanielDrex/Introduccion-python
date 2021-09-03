@@ -81,6 +81,11 @@ print(listadeTupla)
 rango = range(6)
 print(rango)
 
+s = 'abc'
+h = 'bca'
+print(s.__sizeof__())
+print(h.__sizeof__())
+
 #DICCIONARIOS
 diccionario = {"nombre":"Chanchito feliz",
                 "raza": "Persa",

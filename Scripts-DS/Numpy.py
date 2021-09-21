@@ -21,7 +21,8 @@ print(np.full((2,3),3.14),'\n')
 print(np.arange(0,20,2),'\n')
 
 #Inicia en 0, termina en 1 dividido en 5 subdivisiones
-print(np.linspace(0,1,5),'\n')
+print(np.linspace(0,1,10),'\n')
 
 #Creacion de array 3 x 3 con valores aleatorios de 0 a 1
 print(np.random.random((3,3)))
+

@@ -38,3 +38,28 @@ class Admin(Usuario2):
 admin = Admin('Super','Administrador')
 admin.saludo()
 admin.superSaludo()
+
+class Animal:
+    def __init__(self,nombre,onomatopeya):
+        self.nombre = nombre
+        self.onomatopeya = onomatopeya
+        
+    def saludo(self):
+        print('Hola, soy un',self.tipo, 'y mi nombre es',self.nombre,'y mi sonido es el',self.onomatopeya)
+
+
+class Gato(Animal):
+    tipo = 'gato'
+
+class Perro(Animal):
+    tipo = 'perro'
+    def __init__(self, nombre, onomatopeya):
+        super().__init__(nombre, onomatopeya)
+        print('constructor extendido')
+    
+       
+        
+gato = Gato('lalo','maullido')
+gato.saludo()
+perro = Perro('robert','ladrido')
+perro.saludo()
